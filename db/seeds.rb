@@ -30,4 +30,8 @@ ActiveRecord::Base.transaction do
     commentable_id: c1.id,
     commentable_type: 'Contact'
   )
+
+  lame = Group.create!(name: 'Lame friends', owner_id: bfast.id)
+
+  GroupContact.create!(group_id: lame.id, contact_id: 2)
 end
