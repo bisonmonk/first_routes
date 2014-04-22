@@ -12,7 +12,7 @@ ActiveRecord::Base.transaction do
   bfast = User.create!(name: 'Breakfast', email: 'bfast@gmail.com', username: '2fast')
 
   c1 = Contact.create!(user_id: johnny.id, name: 'Breakfast', email: 'bfast@gmail.com')
-  c2 = Contact.create!(user_id: bfast.id, name: 'Markov', email: 'markov@gmail.com')
+  c2 = Contact.create!(user_id: bfast.id, name: 'Markov', email: 'markov@gmail.com', favorite: true)
 
   ContactShare.create!(user_id: gizmo.id, contact_id: c1.id)
   ContactShare.create!(user_id: gizmo.id, contact_id: c2.id)
